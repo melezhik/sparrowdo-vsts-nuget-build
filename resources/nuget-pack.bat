@@ -1,5 +1,7 @@
-set configuration=%1
-set project_file=%2
+set nuget_bin=%1
+set configuration=%2
+set project_file=%3
+set output_directory=%4
 
-nuget pack %project_file% -Properties Configuration=%configuration% -OutputDirectory out -Build
+%nuget_bin% pack %project_file% -Properties Configuration=%configuration% -OutputDirectory %output_directory% -Build
 

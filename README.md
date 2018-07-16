@@ -10,6 +10,8 @@ Sparrowdo module to generate VSTS yaml steps to build nuget packages.
       project-folder => "app/foo", # path to project directory
       project-file => "CoolLib.csproj", # path to project file
       configuration => "Release", # msbuild configuration, default value
+      nuget-bin => "C:/Nuget/nuget.exe", # Path to nuget binary, this is default value
+      output_directory => "packages", # directory to write nuget packages, this is default value
     );
 
     $ sparrowdo --local_mode --no_sudo
