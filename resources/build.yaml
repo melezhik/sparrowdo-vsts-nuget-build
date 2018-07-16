@@ -1,8 +1,8 @@
-- task: BatchScript@1
-  displayName: Run nuget pack for [% working_folder %]
+- task: NuGetCommand@2
+  displayName: NuGet pack
   inputs:
-    filename: '"\$(Build.SourcesDirectory)/[% base_dir %]/nuget-pack.bat"'
-    arguments: '[% nuget_bin %] [% configuration %] [% project_file %] "\$(Build.SourcesDirectory)/[% output_directory %]"'
-    workingFolder: '"\$(Build.SourcesDirectory)/[% project_folder %]"'
-
+    command: pack
+    packagesToPack: '"\$(Build.SourcesDirectory)/[% project_folder %]/[% project_file %]"'
+    configuration: [% configuration %]
+    packDestination: '"\$(Build.ArtifactStagingDirectory)/[% output_directory %]"'
 

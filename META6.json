@@ -14,8 +14,7 @@
     "Sparrowdo::VSTS::YAML::Nuget::Build" : "lib/Sparrowdo/VSTS/YAML/Nuget/Build.pm6"
   },
   "resources" : [
-    "build.yaml",
-    "nuget-pack.bat"
+    "build.yaml"
   ],
   "source-type" : "git",
   "source-url" : "https://github.com/melezhik/sparrowdo-vsts-nuget-build.git",
