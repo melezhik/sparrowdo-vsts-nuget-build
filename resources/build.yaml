@@ -1,0 +1,9 @@
+steps:
+- task: BatchScript@1
+  displayName: Run nuget pack for [% working_folder %]
+  inputs:
+    filename: '"\$(Build.SourcesDirectory)/[% base_dir %]/nuget-pack.bat"'
+    arguments: '[% configuration %] [% project_file %]'
+    workingFolder: '"\$(Build.SourcesDirectory)/[% project_folder %]"'
+
+
